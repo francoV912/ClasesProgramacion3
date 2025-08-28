@@ -1,0 +1,15 @@
+@import url(card.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    background-color: blueviolet;
+}
+
+body{
+    background-color: rgba(255, 166, 0, 0.493);
+}

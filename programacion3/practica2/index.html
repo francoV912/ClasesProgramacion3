@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Practica</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar__inner">
+        <div class="navbar__brand">
+          <h1 class="navbar__title">Mi Sitio</h1>
+        </div>
+        <ul class="navbar__links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- CARD -->
+    <div class="card">
+      <img
+        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&h=180&q=80"
+        srcset="
+          https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&h=180&q=80  1x,
+          https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&h=360&q=80 2x
+        "
+        alt="Equipo colaborando en oficina"
+        loading="lazy"
+        class="card__image"
+      />
+      <div class="card__content">
+        <span class="card__badge">Destacado</span>
+        <h2 class="card__title">Título de la Card</h2>
+        <p class="card__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quos.
+        </p>
+        <div class="card__actions">
+          <button class="btn">Leer más</button>
+          <a href="#" class="btn btn--outline">Detalles</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__bottom">
+        © 2025 Mi sitio web. Todos los derechos reservados.
+      </div>
+    </footer>
+  </body>
+</html>

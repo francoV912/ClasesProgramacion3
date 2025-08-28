@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <style>
+        body{
+            background-color:chocolate;
+        }
+        div{
+            font-family:cursive;
+        }
+        legend{
+            font-family: fantasy;;
+        }
+    </style>
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form method="get">
+        <fieldset>
+            <legend>Datos Personales:</legend>
+            <div>
+                <label for="nombre-persona">Nombre: </label><br>
+                <input type="text" name="nombre" id="nombre-persona" placeholder="Juan" autocomplete="name" />
+            </div>
+                <br>
+            <div>
+                <label for="apellido-persona">Apellido: </label><br>
+                <input type="text" name="apellido" id="apellido-persona" placeholder="perez" >
+            </div>
+                <br>
+            <div>
+                <label for="edad-persona">Edad: </label><br>
+                <input type="number" name="edad" id="edad-persona" placeholder="20"  min="18">
+            </div>
+                <br>
+            <div>
+                <label for="telefono">Numero de telefono:</label>
+                <br>
+                <input type="tel" name="telefono" id="telefono" placeholder="3364123456">
+            </div>
+                <br>
+            <div>
+                <label for="provincias">Provincia: </label>
+                <select name="provincias" id="provincias">
+                    <option>Seleccionar...</option>
+                    <option value="bs">Buenos Aires</option>
+                    <option value="sf">Santa Fe</option>
+                    <option value="jj">Jujuy</option>
+                    <option value="men">Mendoza</option>
+                    <option value="tdf">Tierra Del Fuego</option>
+                </select>
+            </div>
+                <br>
+            <div>
+                <label for="genero">Genero: </label>
+                <br>
+                <label for="f">F</label>
+                <input type="radio" name="genero" id="f" value="f">
+                <br>
+                <label for="m">M</label>
+                <input type="radio" name="genero" id="m" value="m">
+                <br>
+                <label for="otro">Otro</label>
+                <input type="radio" name="genero" id="otro" value="otro">
+            </div>
+                <br>
+            <div>
+                <label for="fnac">Fecha de Nacimiento:</label>
+                <br>
+                <input type="date" name="fnac" id="fnac">
+            </div>
+                <br>
+            <div>
+                <label for="img">Foto de Perfil:</label>
+                <br>
+                <input type="file" name="img" id="img" accept="image/*">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cosas random:</legend>
+            <div>
+                <label for="observaciones">Observaciones: </label>
+                <br>
+                <textarea name="observaciones" id="bservaciones"></textarea>
+                <br>
+            </div>
+                <br>
+            <div>
+                <label for="distancia">Distancia (km):</label>
+                <br>
+                <input type="range" name="distancia" id="distancia" min="2" max="10">
+            </div>
+                <br>
+            <div>
+                <input type="checkbox" name="terminos" id="terminos">
+                <label for="terminos">Acepto darle mi alma a esta pagina</label>
+            </div>
+        </fieldset>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

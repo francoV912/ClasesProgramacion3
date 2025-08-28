@@ -1,0 +1,26 @@
+footer.footer{
+    background: var(--color-footer);
+    color: white;
+    padding: 1rem;
+    margin-top: auto;
+    position: relative;
+}
+
+footer.footer::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background:linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+    opacity: 0.9;
+}
+
+.footer__bottom{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #dcdcdc;
+}
