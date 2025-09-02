@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+
+<style>
+    :root{
+        --ancho: 3rem;
+        --primary-color:red;
+        --border-color: black;
+        --border:1px solid var(--border-color);
+    }
+
+    .ball{
+        width: var(--ancho);
+        height: var(--ancho);
+        border-radius: 50%;
+        border: var(--border);
+        background-color: var(--primary-color);
+        animation-name: move-x ;
+        animation-delay: 1s;
+        animation: move-x  2.5s linear infinite alternate, pulse 0.3s linear infinite alternate  ;/*es lo mismo que lo de arriba pero en una linea*/
+    }
+
+    @keyframes move-x {
+        0%, 100% {
+            transform: translate(0px);
+        }
+        25% {
+            transform: translate(250px, 0px);
+        }
+        50%{
+            transform: translate(250px, 250px);
+        }
+        75%{
+            transform: translate(0px, 250px);
+        }
+    }
+
+        @keyframes pulse {
+        0%, 25%, 50%, 75%, 100% {
+            opacity: 0.5;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <h1>Animaciones</h1>
+
+    <div class="ball"></div>
+</body>
+</html>
