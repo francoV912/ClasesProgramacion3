@@ -6,10 +6,6 @@
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4 ease;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
 }
 
 .card:hover{
