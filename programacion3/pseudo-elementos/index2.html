@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <style>
+        body{
+            background-color: #333;
+            color: #f9f9f9;
+        }
+
+        .tooltip{
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .tooltip::after{
+            content: attr(data-mensaje);
+            position: absolute;
+            left: 50px;
+
+            width: max-content;
+            border: 1px solid #f9f9f9;
+            border-radius: 4px;
+            padding: 2px 4px;
+            opacity: 0;
+            transition: all 0.5s linear;
+        }
+
+        .tooltip:hover::after{
+            opacity: 1;
+        }
+        
+        .up:hover::before{
+            content:"⬆"
+        }
+        .down:hover::after{
+            content: "⬇";
+        }
+
+        .btn-buy{
+            all:unset;
+            width: 30px;
+            text-align: center;
+            padding: 4px 8px;
+            border: 2px solid #48ff48;
+            border-radius: 6px;
+            transition: all 0.3s;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .btn-buy:hover{
+            background-color: #48ff48;
+            letter-spacing: 30px;
+        }
+
+        .btn-buy::before{
+            content: "u";
+            position: absolute;
+            bottom: -15px;
+            left: 19px;
+            color: yellow;
+            transition: all 0.2s;
+        }
+
+        .btn-buy::after{
+            content: "y";
+            position: absolute;
+            bottom: -15px;
+            left: 31px;
+            color: red;
+            transition: all 1.3s;
+        }
+        .btn-buy:hover::before,
+        .btn-buy:hover::after{
+            transform: translateY(-19px);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tooltip</h1>
+    <p><button data-mensaje="⬆️" class="tooltip">Subir</button></p>
+    <p><button data-mensaje="⬇️" class="tooltip">Bajar</button></p>
+
+    <button class="btn up">Subir</button>
+    <button class="btn down">Subir</button>
+
+    <br>
+    <br>
+    <p>---------------------------------------------------------------------------------------------</p>
+    <button class="btn-buy">Buy</button>
+</body>
+</html>

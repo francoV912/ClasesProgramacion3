@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        .box{
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            padding: 10px;
+            margin-left: 10px;
+            position: relative;
+            background-color: white;
+        }
+
+        .box2{
+            position: relative;
+            background-color: red;
+            margin-left: 60px;
+            margin-top: -140px;
+        }
+        
+        .box3{
+            background-color: red;
+            margin-left: 120px;
+            margin-top: -140px;
+        }
+
+        .box4{
+            background-color: white;
+            margin-top: -140px;
+            margin-left: 180px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Caja 1 200x200</div>
+    <div class="box box2">Caja 2 200x200</div>
+    <div class="box box2 box3">Caja 3 200x200</div>
+    <div class="box box2 box3 box4">Caja 4 200x200</div>
+</body>
+</html>

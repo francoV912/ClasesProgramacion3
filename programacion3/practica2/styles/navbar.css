@@ -1,0 +1,87 @@
+nav.navbar{
+    background: var(--color-primario);
+    padding: 0.9rem 1.2rem;
+    position: relative;
+}
+
+nav.navbar::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0)
+    );
+}
+
+.navbar__inner{
+    max-width: 2000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.navbar__title{
+    color: #fff;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.navbar__brand{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    position: relative;
+}
+
+.navbar__brand::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--color-secundario), rgba(255, 255, 255, 0.25) );
+    box-shadow: 0 0 0 1px rgb(255, 255, 255, 0.25) inset;
+}
+
+.navbar__links{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__links a{
+    color: white;
+    text-decoration: none;
+    padding: 0.25rem 0;
+    position: relative;
+}
+
+.navbar__links li+li::before{
+    content: "•";
+    color: rgba(255, 255, 255, 0.6);
+    margin-right: 0.5rem;
+}
+
+.navbar__links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background-color: var(--color-secundario);
+    transition: width 0.25s ease;
+}
+
+.navbar__links a:hover::after{
+    width: 100%;
+}

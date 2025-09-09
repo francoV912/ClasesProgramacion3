@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Elementos</title>
+    <style>
+        body{
+            background-color: #333;
+        }
+        .title{
+            color:#f9f9f9;
+        }
+        .title::first-letter{
+            color: green;
+        }
+        .title::after{
+            content: "!!";
+            color: coral;
+        }
+        .title::before{
+            content: "¿¿";
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Holiwis</h1>
+    <p>Lospseudo elementos representan partes o subpartes de un elemento.</p>
+</body>
+</html>

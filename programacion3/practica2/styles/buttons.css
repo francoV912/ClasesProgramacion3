@@ -1,0 +1,35 @@
+.btn{
+    padding: 0.55rem 1rem;
+    background-color: var(--color-secundario);
+    border:none;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    position:relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover{
+    background: #17a673;
+}
+
+.btn:active{
+    transform: translateY(1px);
+}
+.btn::before{
+    content: "⟫";
+}
+
+.btn--outline{
+    background: transparent;
+    color: var(--color-primario);
+    border: 1px solid rgba(78, 115, 223, 0.4);
+}
+
+.btn--outline:hover{
+    background: rgba(78, 115, 223, 0.08);
+}

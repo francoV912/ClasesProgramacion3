@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            background-color: coral;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item{
+            box-sizing: border-box;
+            width: 50px;
+            height: 50px;
+            border: 1px solid blue;
+            border-radius: 50%;
+            background-color: aqua;
+            background: radial-gradient( white,aqua);
+            text-align: center;
+        }
+
+        .item-1{
+            order: 1;
+        }
+        .item-2, .item-3, .item-7{
+            order: 0;
+        }
+        .item-4, .item-5, .item-6{
+            order: -2;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+        <section class="box">
+                <div class="item item-1">1</div>
+                <div class="item item-2">2</div>
+                <div class="item item-3">3</div>
+                <div class="item item-4">4</div>
+                <div class="item item-5">5</div>
+                <div class="item item-6">6</div>
+                <div class="item item-7">7</div>
+        </section>
+</body>
+</html>
+
+<!---todo nodo que este dentro de un contenedor que tenga la propiedad dispaly-flex
+se va a considerar un item. los nodo pueden ser representados por un elemento o por u texto.-->
